@@ -1,0 +1,36 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: "s3-proxy-kserve-secret"
+  annotations:
+    serving.kserve.io/s3-cabundle: ""
+    serving.kserve.io/s3-endpoint: "local-s3-service.ezdata-system.svc.cluster.local:30000/"
+    serving.kserve.io/s3-useanoncredential: "false"
+    serving.kserve.io/s3-usehttps: "0"
+    serving.kserve.io/s3-verifyssl: "0"
+stringData:
+  AWS_ACCESS_KEY_ID: "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJJNm9uN2xRODdkeGRBNEhuM0NoSDhKODktNC1vRnBTbWJJLTRjOHNKajM4In0.eyJleHAiOjE3NDEzNDQxMjYsImlhdCI6MTc0MTM0MjMyNiwiYXV0aF90aW1lIjoxNzQxMjU1MjUxLCJqdGkiOiJjODQ4YjAwOS02NTc3LTQ3MzEtOTNhOC0xN2Q3ODE1NWExOTEiLCJpc3MiOiJodHRwczovL2tleWNsb2FrLmhwZXBjYWkuZXptZXJhbC5kZW1vLmxvY2FsL3JlYWxtcy9VQSIsInN1YiI6ImI3OTkxNjA0LTA3OGItNGVmZC04OGVhLWI1N2Q5YTQ1OTk4ZSIsInR5cCI6IkJlYXJlciIsImF6cCI6InVhIiwibm9uY2UiOiJHdm1ieW96WnFjQ2pmM1dVWGpPOGNCNm5hSzNjNTRIWHRtQl9BOEotTUt3Iiwic2Vzc2lvbl9zdGF0ZSI6ImYyZTQyYmNkLWZjZjUtNDc2YS1iNmRjLWNhYTZjMzBhZGZlYiIsImFjciI6IjEiLCJzY29wZSI6Im9wZW5pZCBkZHBjYWk6dWEgZW1haWwgb2ZmbGluZV9hY2Nlc3MgcHJvZmlsZSIsInNpZCI6ImYyZTQyYmNkLWZjZjUtNDc2YS1iNmRjLWNhYTZjMzBhZGZlYiIsInVpZCI6IjUwMDEiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImdpZCI6IjUwMDEiLCJuYW1lIjoiYWRtaW4iLCJuYW1lc3BhY2UiOiJhZG1pbi05MDFkMDQyYyIsImdyb3VwcyI6WyJ1YS1lbmFibGVkIiwib2ZmbGluZV9hY2Nlc3MiLCJhZG1pbiIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy11YSJdLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsInBvc2l4X3VzZXJuYW1lIjoiYWRtaW4iLCJmYW1pbHlfbmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSJ9.A5z4YEA3chwSVkjNm9ELywvtTtrWHW2zubNdk4uhSCZkqathH1DhcLUR-eemcLDvtjuDGh3ZdjtSr7OyAZPkO94XO4BXGOf7JhfrCjYSJgfWtGbGu7MK3LD10uzgBfuLgX3_wwzLkCOkekUgUp89XD_D69iX25IGTfeFy1lEaM8yF63dHRzdv-CFuhumJbTtjyPcDQ9SKLl4pCpDzSNK1YYWg2nuNqor4D0qZBW_-ZxBitILmee28oi3H1KKr9laZEPnkV6cJWqIyE5pOthvNHUfc8QlHZNNTgJxQvAcU_0PaIQmYNsyHJnU7X7LqZeMBIC8SznMh4D8Bh_qZjEjZw"
+  AWS_SECRET_ACCESS_KEY: "s3"
+type: Opaque
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: "s3-proxy-kserve-sa"
+secrets:
+  - name: "access-token"
+
+---
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
+metadata:
+  name: "retail-experiment"
+  annotations:
+    "sidecar.istio.io/inject": "false"
+spec:
+  predictor:
+    tensorflow:
+      storageUri: "s3://mlflow.ddpcai/14/dcb9bf579a2449e88cb47e697b81af39/artifacts/tf_serving_model"
+    serviceAccountName: "s3-proxy-kserve-sa"

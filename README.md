@@ -1,30 +1,7 @@
 ![smart-retail-experience](images/logo.png)
-## Smart Retail Experience 
+## Smart Data Analyst 
 
-In this technical demonstation, you will play the role of a seasoned data
-scientist at one of Europe's leading grocery chains. You are in charge of
-ingesting and presenting all of the sales numbers to gather crucial insights
-into how the business can operate more effectively; understanding what customers
-like and how they shop. Whilst presenting to your executives, you have been
-asked to come up with a new idea for the future of checkouts that leverages
-vision-based machine learning. 
-
-This technical demonstration will run through how to use several of the most
-popular open-source data and machine learning tools that come natively bundled
-with **HPE Ezmeral Unified Analytics** to develop a new-age retail experience,
-including:
-
-- **Apache Spark** and **Livy** for querying data files and creating Delta
-  tables.
-- **Apache Hive** for connecting the Delta Tables as a Unified Analytics Data
-  Source in order to create datasets.
-- **EzPresto** to retrieve data from datasets from any application. 
-- **Apache Supersets** to create dashboards and visualize datasets.
-- **Tensorflow** to train a machine learning model.
-- **MLflow** to manage the training of and storing your machine learning models.
-- **Kubeflow and KServe** to serve your models at scale to an API endpoint.
-
-Let's dive in!
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 1. [What You'll Need](#what-youll-need)
 1. [Procedure](#procedure)

@@ -1,4 +1,4 @@
-![smart-retail-experience](images/high-level-overview.png)
+![smart-retail-experience](images/logo.png)
 ## Smart Retail Experience 
 
 In this technical demonstation, you will play the role of a seasoned data

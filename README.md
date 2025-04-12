@@ -1,8 +1,21 @@
 ![smart-retail-experience](images/logo.png)
 ## Smart Data Analyst 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+**Welcome to our Smart Retail Data Analyst Demo!**
 
+In this demonstration, we'll harness the power of **Presto**, **Apache Spark**, **Delta Lake** and **NVIDIA Inference Microservices** (NIM) to unlock actionable insights from our retail data. Using advanced analytics, we'll explore customer purchasing patterns, predict sales trends, and optimize inventory management—all powered by real-time SQL queries on our Delta Lake tables.
+
+Retail data holds tremendous potential to drive business growth, from personalized marketing to supply chain optimization. However, the sheer volume and complexity of this data—spanning transactions, customer behavior, and inventory—make it challenging to extract timely insights.
+
+This is where our **smart data analyst** comes in. By combining:
+- **Apache Spark**'s distributed compute,
+- **Delta Lake**'s reliability for large-scale data,
+- **Presto**'s speed for interactive queries,
+- **NVIDIA Inference Microservices** (NIM) for AI-powered analysis for natural language questions.
+
+We can transform raw data into strategic decisions. Whether you're asking about seasonal sales trends, product performance, or customer demographics, the system generates precise SQL queries, executes them efficiently, and delivers clear business insights—all in seconds.
+
+Let’s explore how this works!
 1. [What You'll Need](#what-youll-need)
 1. [Procedure](#procedure)
 1. [Functional Architecture](#functional-architecture)
@@ -11,7 +24,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 ## What You'll Need
 
 For this tutorial, ensure you have:
-
 - Access to an **HPE Private Cloud AI** environment.
 
 ## Procedure
@@ -34,7 +46,7 @@ To complete this tutorial follow the steps below:
    ```
 1. Navigate to the tutorial's directory (`ezua-tutorials/demos/smart-retail`).
 1. Launch the `00.introduction.ipynb` notebook file.
-1. Run the remaining notebook exercises `01` through `07`.
+1. Run the remaining notebook exercises `01` through `05`.
 
 ## Functional Architecture
 

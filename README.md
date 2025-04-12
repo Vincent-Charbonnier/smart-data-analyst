@@ -48,28 +48,8 @@ To complete this tutorial follow the steps below:
 1. Launch the `00.introduction.ipynb` notebook file.
 1. Run the remaining notebook exercises `01` through `05`.
 
-## Functional Architecture
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-
 ## Clean Up
 
-To clean up the resources used during this experiment, follow the steps below:
+Please don't forget to cleanup the environment after you've completed it in order to release the resources and leave it clean for the next users
 
-Hopefully follow the cleanup notebook
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-- Deleting Endpoints
-    1. Navigate to the `Tools and Frameworks` page in your Unified Analytics
-       cluster and open `Kubeflow`.
-    1. In the left toolbar, click `Endpoints`.
-    1. Delete the `retail-experiment` isvc that was launched in Exercize 6.
-
-- Remove Hive Metastore
-    1. Navigate to the `Tools and Frameworks` page in your Unified Analytics
-       cluster and open `Kubeflow`.
-    1. In the left toolbar, click `Endpoints`.
-    1. Delete the `retail-experiment` isvc that was launched in Exercize 6.
+## Thank you and have fun!

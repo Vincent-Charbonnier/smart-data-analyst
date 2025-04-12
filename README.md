@@ -3,7 +3,7 @@
 
 **Welcome to our Smart Retail Data Analyst Demo!**
 
-In this demonstration, we'll harness the power of **Presto**, **Apache Spark** and **Delta Lake** to unlock actionable insights from our retail data. Using advanced analytics, we'll explore customer purchasing patterns, predict sales trends, and optimize inventory management—all powered by real-time SQL queries on our Delta Lake tables.
+In this demonstration, we'll harness the power of **Presto**, **Apache Spark**, **Delta Lake** and **NVIDIA Inference Microservices** (NIM) to unlock actionable insights from our retail data. Using advanced analytics, we'll explore customer purchasing patterns, predict sales trends, and optimize inventory management—all powered by real-time SQL queries on our Delta Lake tables.
 
 Retail data holds tremendous potential to drive business growth, from personalized marketing to supply chain optimization. However, the sheer volume and complexity of this data—spanning transactions, customer behavior, and inventory—make it challenging to extract timely insights.
 

@@ -3,4 +3,3 @@ llama_index.llms.nvidia
 llama_index.embeddings.nvidia
 matplotlib
 polars
-shutils

@@ -3,8 +3,4 @@ llama_index.llms.nvidia
 llama_index.embeddings.nvidia
 matplotlib
 polars
-<<<<<<< HEAD
 shutils
-=======
-shutils
->>>>>>> b826627 (03 corrected delta path & display)

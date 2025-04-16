@@ -6,6 +6,10 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
+# Set user config
+git config --global user.email "charbonnier.vincent@gmail.com"
+git config --global user.name "Vincent-Charbonnier"
+
 # Add changes to the staging area
 git add .
 
